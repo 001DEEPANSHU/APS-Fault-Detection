@@ -1,0 +1,2 @@
+pymongo==4.2.0
+-e. #searches for packages folders in the root directory 
