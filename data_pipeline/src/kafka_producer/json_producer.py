@@ -11,6 +11,7 @@ from confluent_kafka.schema_registry import SchemaRegistryClient
 from confluent_kafka.schema_registry.json_schema import JSONSerializer
 
 from src.kafka_logger import logging
+from src.kafka_config import sasl_conf, schema_config
 import pandas as pd
 from typing import List
 from src.entity.generic import Generic, instance_to_dict
