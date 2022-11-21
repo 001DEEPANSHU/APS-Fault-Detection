@@ -1,5 +1,7 @@
-from sensor.configurations.mongodb_conection import MongoDBClient
+from sensor.configuration.mongo_db_connection import MongoDBClient
+from sensor.pipeline import training_pipeline
+from sensor.pipeline.training_pipeline import TrainPipeline
 
 if __name__ == '__main__':
-    mongodb_client = MongoDBClient()
-    print(mongodb_client.database.list_collection_names())
+    t_p = TrainPipeline()
+    t_p.run_pipeline()
