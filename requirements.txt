@@ -8,4 +8,5 @@ from-root
 scipy
 scikit-learn
 pyYAML
--e. 
+imblearn
+-e.
