@@ -5,5 +5,7 @@ six
 pandas
 dnspython
 from-root
+scipy
 scikit-learn
+pyYAML
 -e. 
