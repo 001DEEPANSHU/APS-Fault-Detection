@@ -35,5 +35,12 @@ class ModelTrainerArtifact:         # For Stage 4: Model Trainer
     test_metric_artifact: ClassificationMetricArtifact
 
 
-
+@dataclass 
+class ModelEvaluationArtifact:      # For Model Evaluation
+    is_model_accepted: bool
+    improved_accuracy: float
+    best_model_path: str
+    trained_model_path: str
+    train_model_metric_artifact: ClassificationMetricArtifact
+    best_model_metric_artifact: ClassificationMetricArtifact
 
