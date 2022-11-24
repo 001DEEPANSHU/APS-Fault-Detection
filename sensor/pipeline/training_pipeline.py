@@ -26,6 +26,9 @@ from sensor.entity.config_entity import (DataIngestionConfig,
 
 
 class TrainPipeline:
+
+
+    is_pipeline_running=False
     
     def __init__(self):
         self.training_pipeline_config = TrainingPipelineConfig()
