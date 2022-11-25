@@ -57,6 +57,8 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 #
 
 html_theme = "furo_tb"
+# html_theme = "sphinx_rtd_theme"
+
 # theme options inherit directly from furo
 html_theme_options = {
     "announcement": "Copyright © 2022, Deepanshu Kaushik",

@@ -1,5 +1,6 @@
-sensor
-======
+==========
+**sensor**
+==========
 
 .. toctree::
    :maxdepth: 4
