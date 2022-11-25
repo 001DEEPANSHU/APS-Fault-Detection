@@ -8,6 +8,11 @@ Welcome to APS(Air Pressure System) Fault Detection's documentation!
 .. image:: https://www.scania.com/content/www/in/en/home/services/repair-and-maintenance/fleet-care/_jcr_content/image.img.90.992.jpeg/1650617168631.jpeg
    :width: 800
 
+
+====================
+**Table of Content**
+====================
+
 .. toctree::
    :maxdepth: 1
    
@@ -17,7 +22,12 @@ Welcome to APS(Air Pressure System) Fault Detection's documentation!
    sensor
    
 
-Check out the :ref:`modindex` section for module information
+
+Check out the :ref:`modindex` section for source code information
+
+You can visit the `github repository for this project here`_.
+
+.. _`github repository for this project here`: https://github.com/001DEEPANSHU/APS-Fault-Detection
 
    -------------------
    Indices and tables
@@ -26,14 +36,3 @@ Check out the :ref:`modindex` section for module information
    * :ref:`genindex`
    * :ref:`modindex`
    * :ref:`search`
-
-
-
-.. .. _my-reference-label:
-
-.. Section to cross-reference
-.. --------------------------
-
-.. This is the text of the section.
-
-.. It refers to the section itself, see :ref:`my-reference-label`.
