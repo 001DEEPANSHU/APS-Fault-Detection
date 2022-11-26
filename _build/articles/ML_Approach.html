@@ -1,0 +1,319 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Machine Learning Approach &mdash; APS(Air Pressure System) Fault Detection 0.0.1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Machine Learning Pipeline" href="ML_Pipeline.html" />
+    <link rel="prev" title="Project Overview" href="project_overview.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> APS(Air Pressure System) Fault Detection
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="project_overview.html"><strong>Project Overview</strong></a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Machine Learning Approach</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#cost-calculation">Cost Calculation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#eda-findings">EDA Findings</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ML_Pipeline.html">Machine Learning Pipeline</a></li>
+<li class="toctree-l1"><a class="reference internal" href="demo.html"><strong>Practical Demo</strong></a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">APS(Air Pressure System) Fault Detection</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Machine Learning Approach</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/articles/ML_Approach.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="machine-learning-approach">
+<h1>Machine Learning Approach<a class="headerlink" href="#machine-learning-approach" title="Permalink to this headline">¶</a></h1>
+<p>The system in focus is the Air Pressure system (APS) which generates pressurized air that are
+utilized in various functions in a truck, such as braking and gear changes.
+The datasets positive class corresponds to component failures for a specific component of the APS system.
+The negative class corresponds to trucks with failures for components not related to the
+APS system.</p>
+<p>Machine Learning (ML) models can be developed and deployed to make predictions so as to minimize
+costs due to either unnecessary checkups or breakdowns caused by APS failures that have been missed.</p>
+<p>Given that there is a truck failure, the aim is to determine whether or not the truck failure is related to APS.
+This is a binary classification problem, in which the positive class denotes that a specific APS component was responsible
+for the failure while the negative class denotes that a different factor was responsible.</p>
+<div class="section" id="cost-calculation">
+<h2>Cost Calculation<a class="headerlink" href="#cost-calculation" title="Permalink to this headline">¶</a></h2>
+<p>The problem is to reduce the cost due to unnecessary repairs. So it is required to minimize the false predictions.</p>
+<table class="colwidths-given docutils align-default" id="id1">
+<caption><span class="caption-text"><strong>Cost</strong></span><a class="headerlink" href="#id1" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>True Class</p></th>
+<th class="head"><p>Positive</p></th>
+<th class="head"><p>Negative</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Predicted Class</strong></p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>Positive</p></td>
+<td></td>
+<td><p>cost_1 = 10</p></td>
+</tr>
+<tr class="row-even"><td><p>Negative</p></td>
+<td><p>cost_2 = 500</p></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p>The prediction model’s overall cost is equal to the sum of cost_1 times the number of instances with type 1 failure and cost_2 times the number of instances with type 2 failure.</p></li>
+<li><p>In this instance, Cost 1 relates to the expense of a mechanic performing an unnecessary inspection in a workshop</p></li>
+<li><p>Cost 2 refers to the expense of failing to notice a malfunctioning truck that could result in a breakdown.</p></li>
+<li><p>Total_cost = Cost_1 * No_Instances + Cost_2 * No_Instances.</p></li>
+<li><p>From the above problem statement we could observe that, we have to reduce false positives and false negatives.</p></li>
+<li><p>More importantly we have to reduce false negatives, since cost incurred due to false negative is 50 times higher than the false positives.</p></li>
+</ul>
+</div>
+<div class="section" id="eda-findings">
+<h2>EDA Findings<a class="headerlink" href="#eda-findings" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>The target classes are highly imbalanced</p></li>
+<li><p>There are missing values in the dataset</p></li>
+<li><p>The following table gives a summary of all the combinations of imputation methods and models while experiments were carried out:</p></li>
+</ul>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Model</p></th>
+<th class="head"><p>Method of Imputation</p></th>
+<th class="head"><p>Total Cost</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>XGBClassifier</p></td>
+<td><p>Simple Imputer-Constant</p></td>
+<td><p>2950</p></td>
+</tr>
+<tr class="row-odd"><td><p>XGBClassifier</p></td>
+<td><p>Mice</p></td>
+<td><p>3510</p></td>
+</tr>
+<tr class="row-even"><td><p>XGBClassifier</p></td>
+<td><p>Knn-Imputer</p></td>
+<td><p>4460</p></td>
+</tr>
+<tr class="row-odd"><td><p>XGBClassifier</p></td>
+<td><p>Simple Imputer-Mean</p></td>
+<td><p>4950</p></td>
+</tr>
+<tr class="row-even"><td><p>CatBoostClassifier</p></td>
+<td><p>Median</p></td>
+<td><p>5760</p></td>
+</tr>
+<tr class="row-odd"><td><p>Random Forest</p></td>
+<td><p>PCA</p></td>
+<td><p>34150</p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p>We can observe that XGBClassifier with Simple imputer with strategy constant has performed the best with cost of 2950</p></li>
+</ul>
+<a class="reference internal image-reference" href="../_images/EDA_findings.png"><img alt="../_images/EDA_findings.png" src="../_images/EDA_findings.png" style="width: 800px;" /></a>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="ML_Pipeline.html" class="btn btn-neutral float-right" title="Machine Learning Pipeline" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="project_overview.html" class="btn btn-neutral float-left" title="Project Overview" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2022, Deepanshu Kaushik.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
