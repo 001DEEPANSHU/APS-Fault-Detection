@@ -149,7 +149,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'wordcount', 'WordCount Documentation',
+    (master_doc, 'APS-Fault-Detection', 'WordCount Documentation',
      [author], 1)
 ]
 
