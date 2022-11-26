@@ -46,7 +46,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = 'WordCount'
+project = 'Word Count'
 copyright = '2018, Harsha'
 author = 'Harsha'
 
