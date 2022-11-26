@@ -1,0 +1,293 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>sensor.ml.model package &mdash; APS(Air Pressure System) Fault Detection 0.0.1 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="sensor.pipeline package" href="sensor.pipeline.html" />
+    <link rel="prev" title="sensor.ml.metric package" href="sensor.ml.metric.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> APS(Air Pressure System) Fault Detection
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="articles/project_overview.html"><strong>Project Overview</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="articles/ML_Approach.html">Machine Learning Approach</a></li>
+<li class="toctree-l1"><a class="reference internal" href="articles/ML_Pipeline.html">Machine Learning Pipeline</a></li>
+<li class="toctree-l1"><a class="reference internal" href="articles/demo.html"><strong>Practical Demo</strong></a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="sensor.html">sensor package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="sensor.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="sensor.cloud_storage.html">sensor.cloud_storage package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sensor.components.html">sensor.components package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sensor.configuration.html">sensor.configuration package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sensor.constant.html">sensor.constant package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sensor.data_access.html">sensor.data_access package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sensor.entity.html">sensor.entity package</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="sensor.ml.html">sensor.ml package</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="sensor.ml.html#subpackages">Subpackages</a></li>
+<li class="toctree-l4"><a class="reference internal" href="sensor.ml.html#module-sensor.ml">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="sensor.pipeline.html">sensor.pipeline package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sensor.utils.html">sensor.utils package</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="sensor.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sensor.html#module-sensor.exception">sensor.exception module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sensor.html#module-sensor.logger">sensor.logger module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sensor.html#module-sensor">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">APS(Air Pressure System) Fault Detection</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="sensor.html">sensor package</a> &raquo;</li>
+        
+          <li><a href="sensor.ml.html">sensor.ml package</a> &raquo;</li>
+        
+      <li>sensor.ml.model package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/sensor.ml.model.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="sensor-ml-model-package">
+<h1>sensor.ml.model package<a class="headerlink" href="#sensor-ml-model-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-sensor.ml.model.estimator">
+<span id="sensor-ml-model-estimator-module"></span><h2>sensor.ml.model.estimator module<a class="headerlink" href="#module-sensor.ml.model.estimator" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="sensor.ml.model.estimator.ModelResolver">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sensor.ml.model.estimator.</span></span><span class="sig-name descname"><span class="pre">ModelResolver</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'saved_models'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensor/ml/model/estimator.html#ModelResolver"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensor.ml.model.estimator.ModelResolver" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="sensor.ml.model.estimator.ModelResolver.get_best_model_path">
+<span class="sig-name descname"><span class="pre">get_best_model_path</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="reference internal" href="_modules/sensor/ml/model/estimator.html#ModelResolver.get_best_model_path"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensor.ml.model.estimator.ModelResolver.get_best_model_path" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sensor.ml.model.estimator.ModelResolver.is_model_exists">
+<span class="sig-name descname"><span class="pre">is_model_exists</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="reference internal" href="_modules/sensor/ml/model/estimator.html#ModelResolver.is_model_exists"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensor.ml.model.estimator.ModelResolver.is_model_exists" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="sensor.ml.model.estimator.SensorModel">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sensor.ml.model.estimator.</span></span><span class="sig-name descname"><span class="pre">SensorModel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">preprocessor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensor/ml/model/estimator.html#SensorModel"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensor.ml.model.estimator.SensorModel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="sensor.ml.model.estimator.SensorModel.predict">
+<span class="sig-name descname"><span class="pre">predict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensor/ml/model/estimator.html#SensorModel.predict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensor.ml.model.estimator.SensorModel.predict" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="sensor.ml.model.estimator.TargetValueMapping">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sensor.ml.model.estimator.</span></span><span class="sig-name descname"><span class="pre">TargetValueMapping</span></span><a class="reference internal" href="_modules/sensor/ml/model/estimator.html#TargetValueMapping"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensor.ml.model.estimator.TargetValueMapping" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="sensor.ml.model.estimator.TargetValueMapping.reverse_mapping">
+<span class="sig-name descname"><span class="pre">reverse_mapping</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensor/ml/model/estimator.html#TargetValueMapping.reverse_mapping"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensor.ml.model.estimator.TargetValueMapping.reverse_mapping" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="sensor.ml.model.estimator.TargetValueMapping.to_dict">
+<span class="sig-name descname"><span class="pre">to_dict</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensor/ml/model/estimator.html#TargetValueMapping.to_dict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensor.ml.model.estimator.TargetValueMapping.to_dict" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-sensor.ml.model">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-sensor.ml.model" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="sensor.pipeline.html" class="btn btn-neutral float-right" title="sensor.pipeline package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="sensor.ml.metric.html" class="btn btn-neutral float-left" title="sensor.ml.metric package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2022, Deepanshu Kaushik.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
