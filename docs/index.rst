@@ -19,6 +19,7 @@ Welcome to APS(Air Pressure System) Fault Detection's documentation!
    articles/project_overview
    articles/ML_Approach
    articles/ML_Pipeline
+   articles/demo
    sensor
    
 
