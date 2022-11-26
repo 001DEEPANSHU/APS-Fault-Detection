@@ -1,17 +1,39 @@
-.. this is a comment, it is not rendered
-   when adding new *.rst files, reference them here
-   in this index.rst for them to be rendered and added to the
-   table of contents
+.. APS(Air Pressure System) Fault Detection documentation master file, created by
+   sphinx-quickstart on Fri Nov 25 19:32:19 2022.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+Welcome to APS(Air Pressure System) Fault Detection's documentation!
+====================================================================
+.. image:: https://www.scania.com/content/www/in/en/home/services/repair-and-maintenance/fleet-care/_jcr_content/image.img.90.992.jpeg/1650617168631.jpeg
+   :width: 800
 
 
-word-count
-==========
+====================
+**Table of Content**
+====================
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
+   
+   articles/project_overview
+   articles/ML_Approach
+   articles/ML_Pipeline
+   articles/demo
+   sensor
+   
 
-   purpose.rst
-   dependencies.rst
-   usage.rst
-   credit.rst
-   exercises.rst
+
+Check out the :ref:`modindex` section for source code information
+
+You can visit the `github repository for this project here`_.
+
+.. _`github repository for this project here`: https://github.com/001DEEPANSHU/APS-Fault-Detection
+
+   -------------------
+   Indices and tables
+   -------------------
+
+   * :ref:`genindex`
+   * :ref:`modindex`
+   * :ref:`search`

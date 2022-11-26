@@ -1,0 +1,8 @@
+Project Overview
+    Introduction
+    Business Problem
+    Machine Learning Approach
+
+Problem Statement
+Solution Proposed
+Project Architecture
