@@ -22,18 +22,6 @@ Welcome to APS(Air Pressure System) Fault Detection's documentation!
    articles/demo
    sensor
    
-
-
-Check out the :ref:`modindex` section for source code information
-
 You can visit the `github repository for this project here`_.
 
 .. _`github repository for this project here`: https://github.com/001DEEPANSHU/APS-Fault-Detection
-
-   -------------------
-   Indices and tables
-   -------------------
-
-   * :ref:`genindex`
-   * :ref:`modindex`
-   * :ref:`search`
