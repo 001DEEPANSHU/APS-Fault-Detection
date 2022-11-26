@@ -1,0 +1,862 @@
+<!doctype html>
+<html class="no-js">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="#" /><link rel="search" title="Search" href="search.html" />
+
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.01.02"/><title>Index - APS(Air Pressure System) Fault Detection 0.0.1 documentation</title>
+<link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=df49af52631e7917044a9c21a57f7b83170a6dd0" />
+    <link rel="stylesheet" type="text/css" href="_static/ftb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?digest=fade93df149f7c5fedb3ff897f799dc7d283b420" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  body[data-theme="dark"] {
+    --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+  }
+  @media (prefers-color-scheme: dark) {
+    body:not([data-theme="light"]) {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+  }
+</style></head>
+  <body>
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" />
+      <line x1="4" y1="6" x2="20" y2="6" />
+      <line x1="10" y1="12" x2="20" y2="12" />
+      <line x1="6" y1="18" x2="20" y2="18" />
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+<div class="announcement">
+  <aside class="announcement-content">
+     Copyright © 2022, Deepanshu Kaushik 
+  </aside>
+</div>
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="index.html"><div class="brand">APS(Air Pressure System) Fault Detection 0.0.1 documentation</div></a>
+    </div>
+    <div class="header-right">
+      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="index.html">
+  
+  
+  <span class="sidebar-brand-text">APS(Air Pressure System) Fault Detection 0.0.1 documentation</span>
+  
+</a><form class="sidebar-search-container" method="get" action="search.html" role="search">
+  <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <ul>
+<li class="toctree-l1"><a class="reference internal" href="articles/project_overview.html"><strong>Project Overview</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="articles/ML_Approach.html">Machine Learning Approach</a></li>
+<li class="toctree-l1"><a class="reference internal" href="articles/ML_Pipeline.html">Machine Learning Pipeline</a></li>
+<li class="toctree-l1"><a class="reference internal" href="articles/demo.html"><strong>Practical Demo</strong></a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="sensor.html">sensor package</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="sensor.cloud_storage.html">sensor.cloud_storage package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sensor.components.html">sensor.components package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sensor.configuration.html">sensor.configuration package</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="sensor.constant.html">sensor.constant package</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="sensor.constant.training_pipeline.html">sensor.constant.training_pipeline package</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="sensor.data_access.html">sensor.data_access package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sensor.entity.html">sensor.entity package</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="sensor.ml.html">sensor.ml package</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="sensor.ml.metric.html">sensor.ml.metric package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sensor.ml.model.html">sensor.ml.model package</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="sensor.pipeline.html">sensor.pipeline package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sensor.utils.html">sensor.utils package</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        
+        <div class="content-icon-container">
+          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          
+<section class="genindex-section">
+  <h1 id="index">Index</h1>
+  <div class="genindex-jumpbox"><a href="#B"><strong>B</strong></a> | <a href="#C"><strong>C</strong></a> | <a href="#D"><strong>D</strong></a> | <a href="#E"><strong>E</strong></a> | <a href="#F"><strong>F</strong></a> | <a href="#G"><strong>G</strong></a> | <a href="#I"><strong>I</strong></a> | <a href="#L"><strong>L</strong></a> | <a href="#M"><strong>M</strong></a> | <a href="#P"><strong>P</strong></a> | <a href="#R"><strong>R</strong></a> | <a href="#S"><strong>S</strong></a> | <a href="#T"><strong>T</strong></a> | <a href="#V"><strong>V</strong></a> | <a href="#W"><strong>W</strong></a></div>
+</section>
+<section id="B" class="genindex-section">
+  <h2>B</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="sensor.entity.html#sensor.entity.artifact_entity.ModelEvaluationArtifact.best_model_metric_artifact">best_model_metric_artifact (sensor.entity.artifact_entity.ModelEvaluationArtifact attribute)</a>
+</li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="sensor.entity.html#sensor.entity.artifact_entity.ModelEvaluationArtifact.best_model_path">best_model_path (sensor.entity.artifact_entity.ModelEvaluationArtifact attribute)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="C" class="genindex-section">
+  <h2>C</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="sensor.entity.html#sensor.entity.artifact_entity.ClassificationMetricArtifact">ClassificationMetricArtifact (class in sensor.entity.artifact_entity)</a>
+</li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="sensor.configuration.html#sensor.configuration.mongo_db_connection.MongoDBClient.client">client (sensor.configuration.mongo_db_connection.MongoDBClient attribute)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="D" class="genindex-section">
+  <h2>D</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="sensor.components.html#sensor.components.data_ingestion.DataIngestion">DataIngestion (class in sensor.components.data_ingestion)</a>
+</li>
+        <li><a href="sensor.entity.html#sensor.entity.artifact_entity.DataIngestionArtifact">DataIngestionArtifact (class in sensor.entity.artifact_entity)</a>
+</li>
+        <li><a href="sensor.entity.html#sensor.entity.config_entity.DataIngestionConfig">DataIngestionConfig (class in sensor.entity.config_entity)</a>
+</li>
+        <li><a href="sensor.components.html#sensor.components.data_transformation.DataTransformation">DataTransformation (class in sensor.components.data_transformation)</a>
+</li>
+        <li><a href="sensor.entity.html#sensor.entity.artifact_entity.DataTransformationArtifact">DataTransformationArtifact (class in sensor.entity.artifact_entity)</a>
+</li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="sensor.entity.html#sensor.entity.config_entity.DataTransformationConfig">DataTransformationConfig (class in sensor.entity.config_entity)</a>
+</li>
+        <li><a href="sensor.components.html#sensor.components.data_validation.DataValidation">DataValidation (class in sensor.components.data_validation)</a>
+</li>
+        <li><a href="sensor.entity.html#sensor.entity.artifact_entity.DataValidationArtifact">DataValidationArtifact (class in sensor.entity.artifact_entity)</a>
+</li>
+        <li><a href="sensor.entity.html#sensor.entity.config_entity.DataValidationConfig">DataValidationConfig (class in sensor.entity.config_entity)</a>
+</li>
+        <li><a href="sensor.components.html#sensor.components.data_validation.DataValidation.detect_dataset_drift">detect_dataset_drift() (sensor.components.data_validation.DataValidation method)</a>
+</li>
+        <li><a href="sensor.entity.html#sensor.entity.artifact_entity.DataValidationArtifact.drift_report_file_path">drift_report_file_path (sensor.entity.artifact_entity.DataValidationArtifact attribute)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="E" class="genindex-section">
+  <h2>E</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="sensor.html#sensor.exception.error_message_detail">error_message_detail() (in module sensor.exception)</a>
+</li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="sensor.data_access.html#sensor.data_access.sensor_data.SensorData.export_collection_as_dataframe">export_collection_as_dataframe() (sensor.data_access.sensor_data.SensorData method)</a>
+</li>
+        <li><a href="sensor.components.html#sensor.components.data_ingestion.DataIngestion.export_data_into_feature_store">export_data_into_feature_store() (sensor.components.data_ingestion.DataIngestion method)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="F" class="genindex-section">
+  <h2>F</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="sensor.entity.html#sensor.entity.artifact_entity.ClassificationMetricArtifact.f1_score">f1_score (sensor.entity.artifact_entity.ClassificationMetricArtifact attribute)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="G" class="genindex-section">
+  <h2>G</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="sensor.ml.model.html#sensor.ml.model.estimator.ModelResolver.get_best_model_path">get_best_model_path() (sensor.ml.model.estimator.ModelResolver method)</a>
+</li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="sensor.ml.metric.html#sensor.ml.metric.classification_metric.get_classification_score">get_classification_score() (in module sensor.ml.metric.classification_metric)</a>
+</li>
+        <li><a href="sensor.components.html#sensor.components.data_transformation.DataTransformation.get_data_transformer_object">get_data_transformer_object() (sensor.components.data_transformation.DataTransformation class method)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="I" class="genindex-section">
+  <h2>I</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="sensor.entity.html#sensor.entity.artifact_entity.ModelEvaluationArtifact.improved_accuracy">improved_accuracy (sensor.entity.artifact_entity.ModelEvaluationArtifact attribute)</a>
+</li>
+        <li><a href="sensor.components.html#sensor.components.data_ingestion.DataIngestion.initiate_data_ingestion">initiate_data_ingestion() (sensor.components.data_ingestion.DataIngestion method)</a>
+</li>
+        <li><a href="sensor.components.html#sensor.components.data_transformation.DataTransformation.initiate_data_transformation">initiate_data_transformation() (sensor.components.data_transformation.DataTransformation method)</a>
+</li>
+        <li><a href="sensor.components.html#sensor.components.data_validation.DataValidation.initiate_data_validation">initiate_data_validation() (sensor.components.data_validation.DataValidation method)</a>
+</li>
+        <li><a href="sensor.components.html#sensor.components.model_evaluation.ModelEvaluation.initiate_model_evaluation">initiate_model_evaluation() (sensor.components.model_evaluation.ModelEvaluation method)</a>
+</li>
+        <li><a href="sensor.components.html#sensor.components.model_pusher.ModelPusher.initiate_model_pusher">initiate_model_pusher() (sensor.components.model_pusher.ModelPusher method)</a>
+</li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="sensor.components.html#sensor.components.model_trainer.ModelTrainer.initiate_model_trainer">initiate_model_trainer() (sensor.components.model_trainer.ModelTrainer method)</a>
+</li>
+        <li><a href="sensor.entity.html#sensor.entity.artifact_entity.DataValidationArtifact.invalid_test_file_path">invalid_test_file_path (sensor.entity.artifact_entity.DataValidationArtifact attribute)</a>
+</li>
+        <li><a href="sensor.entity.html#sensor.entity.artifact_entity.DataValidationArtifact.invalid_train_file_path">invalid_train_file_path (sensor.entity.artifact_entity.DataValidationArtifact attribute)</a>
+</li>
+        <li><a href="sensor.entity.html#sensor.entity.artifact_entity.ModelEvaluationArtifact.is_model_accepted">is_model_accepted (sensor.entity.artifact_entity.ModelEvaluationArtifact attribute)</a>
+</li>
+        <li><a href="sensor.ml.model.html#sensor.ml.model.estimator.ModelResolver.is_model_exists">is_model_exists() (sensor.ml.model.estimator.ModelResolver method)</a>
+</li>
+        <li><a href="sensor.components.html#sensor.components.data_validation.DataValidation.is_numerical_column_exist">is_numerical_column_exist() (sensor.components.data_validation.DataValidation method)</a>
+</li>
+        <li><a href="sensor.pipeline.html#sensor.pipeline.training_pipeline.TrainPipeline.is_pipeline_running">is_pipeline_running (sensor.pipeline.training_pipeline.TrainPipeline attribute)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="L" class="genindex-section">
+  <h2>L</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="sensor.utils.html#sensor.utils.main_utils.load_numpy_array_data">load_numpy_array_data() (in module sensor.utils.main_utils)</a>
+</li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="sensor.utils.html#sensor.utils.main_utils.load_object">load_object() (in module sensor.utils.main_utils)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="M" class="genindex-section">
+  <h2>M</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="sensor.entity.html#sensor.entity.artifact_entity.ModelPusherArtifact.model_file_path">model_file_path (sensor.entity.artifact_entity.ModelPusherArtifact attribute)</a>
+</li>
+        <li><a href="sensor.components.html#sensor.components.model_evaluation.ModelEvaluation">ModelEvaluation (class in sensor.components.model_evaluation)</a>
+</li>
+        <li><a href="sensor.entity.html#sensor.entity.artifact_entity.ModelEvaluationArtifact">ModelEvaluationArtifact (class in sensor.entity.artifact_entity)</a>
+</li>
+        <li><a href="sensor.entity.html#sensor.entity.config_entity.ModelEvaluationConfig">ModelEvaluationConfig (class in sensor.entity.config_entity)</a>
+</li>
+        <li><a href="sensor.components.html#sensor.components.model_pusher.ModelPusher">ModelPusher (class in sensor.components.model_pusher)</a>
+</li>
+        <li><a href="sensor.entity.html#sensor.entity.artifact_entity.ModelPusherArtifact">ModelPusherArtifact (class in sensor.entity.artifact_entity)</a>
+</li>
+        <li><a href="sensor.entity.html#sensor.entity.config_entity.ModelPusherConfig">ModelPusherConfig (class in sensor.entity.config_entity)</a>
+</li>
+        <li><a href="sensor.ml.model.html#sensor.ml.model.estimator.ModelResolver">ModelResolver (class in sensor.ml.model.estimator)</a>
+</li>
+        <li><a href="sensor.components.html#sensor.components.model_trainer.ModelTrainer">ModelTrainer (class in sensor.components.model_trainer)</a>
+</li>
+        <li><a href="sensor.entity.html#sensor.entity.artifact_entity.ModelTrainerArtifact">ModelTrainerArtifact (class in sensor.entity.artifact_entity)</a>
+</li>
+        <li><a href="sensor.entity.html#sensor.entity.config_entity.ModelTrainerConfig">ModelTrainerConfig (class in sensor.entity.config_entity)</a>
+</li>
+        <li>
+    module
+
+        <ul>
+          <li><a href="sensor.html#module-sensor">sensor</a>
+</li>
+          <li><a href="sensor.cloud_storage.html#module-sensor.cloud_storage">sensor.cloud_storage</a>
+</li>
+          <li><a href="sensor.components.html#module-sensor.components">sensor.components</a>
+</li>
+          <li><a href="sensor.components.html#module-sensor.components.data_ingestion">sensor.components.data_ingestion</a>
+</li>
+          <li><a href="sensor.components.html#module-sensor.components.data_transformation">sensor.components.data_transformation</a>
+</li>
+          <li><a href="sensor.components.html#module-sensor.components.data_validation">sensor.components.data_validation</a>
+</li>
+          <li><a href="sensor.components.html#module-sensor.components.model_evaluation">sensor.components.model_evaluation</a>
+</li>
+          <li><a href="sensor.components.html#module-sensor.components.model_pusher">sensor.components.model_pusher</a>
+</li>
+          <li><a href="sensor.components.html#module-sensor.components.model_trainer">sensor.components.model_trainer</a>
+</li>
+          <li><a href="sensor.configuration.html#module-sensor.configuration">sensor.configuration</a>
+</li>
+          <li><a href="sensor.configuration.html#module-sensor.configuration.mongo_db_connection">sensor.configuration.mongo_db_connection</a>
+</li>
+          <li><a href="sensor.constant.html#module-sensor.constant">sensor.constant</a>
+</li>
+          <li><a href="sensor.constant.html#module-sensor.constant.application">sensor.constant.application</a>
+</li>
+          <li><a href="sensor.constant.html#module-sensor.constant.database">sensor.constant.database</a>
+</li>
+          <li><a href="sensor.constant.html#module-sensor.constant.env_variable">sensor.constant.env_variable</a>
+</li>
+          <li><a href="sensor.constant.html#module-sensor.constant.s3_bucket">sensor.constant.s3_bucket</a>
+</li>
+          <li><a href="sensor.constant.training_pipeline.html#module-sensor.constant.training_pipeline">sensor.constant.training_pipeline</a>
+</li>
+          <li><a href="sensor.data_access.html#module-sensor.data_access">sensor.data_access</a>
+</li>
+          <li><a href="sensor.data_access.html#module-sensor.data_access.sensor_data">sensor.data_access.sensor_data</a>
+</li>
+          <li><a href="sensor.entity.html#module-sensor.entity">sensor.entity</a>
+</li>
+          <li><a href="sensor.entity.html#module-sensor.entity.artifact_entity">sensor.entity.artifact_entity</a>
+</li>
+          <li><a href="sensor.entity.html#module-sensor.entity.config_entity">sensor.entity.config_entity</a>
+</li>
+          <li><a href="sensor.html#module-sensor.exception">sensor.exception</a>
+</li>
+          <li><a href="sensor.html#module-sensor.logger">sensor.logger</a>
+</li>
+          <li><a href="sensor.ml.html#module-sensor.ml">sensor.ml</a>
+</li>
+          <li><a href="sensor.ml.metric.html#module-sensor.ml.metric">sensor.ml.metric</a>
+</li>
+          <li><a href="sensor.ml.metric.html#module-sensor.ml.metric.classification_metric">sensor.ml.metric.classification_metric</a>
+</li>
+          <li><a href="sensor.ml.model.html#module-sensor.ml.model">sensor.ml.model</a>
+</li>
+          <li><a href="sensor.ml.model.html#module-sensor.ml.model.estimator">sensor.ml.model.estimator</a>
+</li>
+          <li><a href="sensor.pipeline.html#module-sensor.pipeline">sensor.pipeline</a>
+</li>
+          <li><a href="sensor.pipeline.html#module-sensor.pipeline.training_pipeline">sensor.pipeline.training_pipeline</a>
+</li>
+          <li><a href="sensor.utils.html#module-sensor.utils">sensor.utils</a>
+</li>
+          <li><a href="sensor.utils.html#module-sensor.utils.main_utils">sensor.utils.main_utils</a>
+</li>
+        </ul></li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="sensor.configuration.html#sensor.configuration.mongo_db_connection.MongoDBClient">MongoDBClient (class in sensor.configuration.mongo_db_connection)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="P" class="genindex-section">
+  <h2>P</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="sensor.entity.html#sensor.entity.artifact_entity.ClassificationMetricArtifact.precision_score">precision_score (sensor.entity.artifact_entity.ClassificationMetricArtifact attribute)</a>
+</li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="sensor.ml.model.html#sensor.ml.model.estimator.SensorModel.predict">predict() (sensor.ml.model.estimator.SensorModel method)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="R" class="genindex-section">
+  <h2>R</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="sensor.components.html#sensor.components.data_transformation.DataTransformation.read_data">read_data() (sensor.components.data_transformation.DataTransformation static method)</a>
+
+        <ul>
+          <li><a href="sensor.components.html#sensor.components.data_validation.DataValidation.read_data">(sensor.components.data_validation.DataValidation static method)</a>
+</li>
+        </ul></li>
+        <li><a href="sensor.utils.html#sensor.utils.main_utils.read_yaml_file">read_yaml_file() (in module sensor.utils.main_utils)</a>
+</li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="sensor.entity.html#sensor.entity.artifact_entity.ClassificationMetricArtifact.recall_score">recall_score (sensor.entity.artifact_entity.ClassificationMetricArtifact attribute)</a>
+</li>
+        <li><a href="sensor.ml.model.html#sensor.ml.model.estimator.TargetValueMapping.reverse_mapping">reverse_mapping() (sensor.ml.model.estimator.TargetValueMapping method)</a>
+</li>
+        <li><a href="sensor.pipeline.html#sensor.pipeline.training_pipeline.TrainPipeline.run_pipeline">run_pipeline() (sensor.pipeline.training_pipeline.TrainPipeline method)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="S" class="genindex-section">
+  <h2>S</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="sensor.data_access.html#sensor.data_access.sensor_data.SensorData.save_csv_file">save_csv_file() (sensor.data_access.sensor_data.SensorData method)</a>
+</li>
+        <li><a href="sensor.utils.html#sensor.utils.main_utils.save_numpy_array_data">save_numpy_array_data() (in module sensor.utils.main_utils)</a>
+</li>
+        <li><a href="sensor.utils.html#sensor.utils.main_utils.save_object">save_object() (in module sensor.utils.main_utils)</a>
+</li>
+        <li><a href="sensor.entity.html#sensor.entity.artifact_entity.ModelPusherArtifact.saved_model_path">saved_model_path (sensor.entity.artifact_entity.ModelPusherArtifact attribute)</a>
+</li>
+        <li>
+    sensor
+
+        <ul>
+          <li><a href="sensor.html#module-sensor">module</a>
+</li>
+        </ul></li>
+        <li>
+    sensor.cloud_storage
+
+        <ul>
+          <li><a href="sensor.cloud_storage.html#module-sensor.cloud_storage">module</a>
+</li>
+        </ul></li>
+        <li>
+    sensor.components
+
+        <ul>
+          <li><a href="sensor.components.html#module-sensor.components">module</a>
+</li>
+        </ul></li>
+        <li>
+    sensor.components.data_ingestion
+
+        <ul>
+          <li><a href="sensor.components.html#module-sensor.components.data_ingestion">module</a>
+</li>
+        </ul></li>
+        <li>
+    sensor.components.data_transformation
+
+        <ul>
+          <li><a href="sensor.components.html#module-sensor.components.data_transformation">module</a>
+</li>
+        </ul></li>
+        <li>
+    sensor.components.data_validation
+
+        <ul>
+          <li><a href="sensor.components.html#module-sensor.components.data_validation">module</a>
+</li>
+        </ul></li>
+        <li>
+    sensor.components.model_evaluation
+
+        <ul>
+          <li><a href="sensor.components.html#module-sensor.components.model_evaluation">module</a>
+</li>
+        </ul></li>
+        <li>
+    sensor.components.model_pusher
+
+        <ul>
+          <li><a href="sensor.components.html#module-sensor.components.model_pusher">module</a>
+</li>
+        </ul></li>
+        <li>
+    sensor.components.model_trainer
+
+        <ul>
+          <li><a href="sensor.components.html#module-sensor.components.model_trainer">module</a>
+</li>
+        </ul></li>
+        <li>
+    sensor.configuration
+
+        <ul>
+          <li><a href="sensor.configuration.html#module-sensor.configuration">module</a>
+</li>
+        </ul></li>
+        <li>
+    sensor.configuration.mongo_db_connection
+
+        <ul>
+          <li><a href="sensor.configuration.html#module-sensor.configuration.mongo_db_connection">module</a>
+</li>
+        </ul></li>
+        <li>
+    sensor.constant
+
+        <ul>
+          <li><a href="sensor.constant.html#module-sensor.constant">module</a>
+</li>
+        </ul></li>
+        <li>
+    sensor.constant.application
+
+        <ul>
+          <li><a href="sensor.constant.html#module-sensor.constant.application">module</a>
+</li>
+        </ul></li>
+        <li>
+    sensor.constant.database
+
+        <ul>
+          <li><a href="sensor.constant.html#module-sensor.constant.database">module</a>
+</li>
+        </ul></li>
+        <li>
+    sensor.constant.env_variable
+
+        <ul>
+          <li><a href="sensor.constant.html#module-sensor.constant.env_variable">module</a>
+</li>
+        </ul></li>
+        <li>
+    sensor.constant.s3_bucket
+
+        <ul>
+          <li><a href="sensor.constant.html#module-sensor.constant.s3_bucket">module</a>
+</li>
+        </ul></li>
+        <li>
+    sensor.constant.training_pipeline
+
+        <ul>
+          <li><a href="sensor.constant.training_pipeline.html#module-sensor.constant.training_pipeline">module</a>
+</li>
+        </ul></li>
+        <li>
+    sensor.data_access
+
+        <ul>
+          <li><a href="sensor.data_access.html#module-sensor.data_access">module</a>
+</li>
+        </ul></li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li>
+    sensor.data_access.sensor_data
+
+        <ul>
+          <li><a href="sensor.data_access.html#module-sensor.data_access.sensor_data">module</a>
+</li>
+        </ul></li>
+        <li>
+    sensor.entity
+
+        <ul>
+          <li><a href="sensor.entity.html#module-sensor.entity">module</a>
+</li>
+        </ul></li>
+        <li>
+    sensor.entity.artifact_entity
+
+        <ul>
+          <li><a href="sensor.entity.html#module-sensor.entity.artifact_entity">module</a>
+</li>
+        </ul></li>
+        <li>
+    sensor.entity.config_entity
+
+        <ul>
+          <li><a href="sensor.entity.html#module-sensor.entity.config_entity">module</a>
+</li>
+        </ul></li>
+        <li>
+    sensor.exception
+
+        <ul>
+          <li><a href="sensor.html#module-sensor.exception">module</a>
+</li>
+        </ul></li>
+        <li>
+    sensor.logger
+
+        <ul>
+          <li><a href="sensor.html#module-sensor.logger">module</a>
+</li>
+        </ul></li>
+        <li>
+    sensor.ml
+
+        <ul>
+          <li><a href="sensor.ml.html#module-sensor.ml">module</a>
+</li>
+        </ul></li>
+        <li>
+    sensor.ml.metric
+
+        <ul>
+          <li><a href="sensor.ml.metric.html#module-sensor.ml.metric">module</a>
+</li>
+        </ul></li>
+        <li>
+    sensor.ml.metric.classification_metric
+
+        <ul>
+          <li><a href="sensor.ml.metric.html#module-sensor.ml.metric.classification_metric">module</a>
+</li>
+        </ul></li>
+        <li>
+    sensor.ml.model
+
+        <ul>
+          <li><a href="sensor.ml.model.html#module-sensor.ml.model">module</a>
+</li>
+        </ul></li>
+        <li>
+    sensor.ml.model.estimator
+
+        <ul>
+          <li><a href="sensor.ml.model.html#module-sensor.ml.model.estimator">module</a>
+</li>
+        </ul></li>
+        <li>
+    sensor.pipeline
+
+        <ul>
+          <li><a href="sensor.pipeline.html#module-sensor.pipeline">module</a>
+</li>
+        </ul></li>
+        <li>
+    sensor.pipeline.training_pipeline
+
+        <ul>
+          <li><a href="sensor.pipeline.html#module-sensor.pipeline.training_pipeline">module</a>
+</li>
+        </ul></li>
+        <li>
+    sensor.utils
+
+        <ul>
+          <li><a href="sensor.utils.html#module-sensor.utils">module</a>
+</li>
+        </ul></li>
+        <li>
+    sensor.utils.main_utils
+
+        <ul>
+          <li><a href="sensor.utils.html#module-sensor.utils.main_utils">module</a>
+</li>
+        </ul></li>
+        <li><a href="sensor.data_access.html#sensor.data_access.sensor_data.SensorData">SensorData (class in sensor.data_access.sensor_data)</a>
+</li>
+        <li><a href="sensor.html#sensor.exception.SensorException">SensorException</a>
+</li>
+        <li><a href="sensor.ml.model.html#sensor.ml.model.estimator.SensorModel">SensorModel (class in sensor.ml.model.estimator)</a>
+</li>
+        <li><a href="sensor.components.html#sensor.components.data_ingestion.DataIngestion.split_data_as_train_test">split_data_as_train_test() (sensor.components.data_ingestion.DataIngestion method)</a>
+</li>
+        <li><a href="sensor.pipeline.html#sensor.pipeline.training_pipeline.TrainPipeline.start_data_ingestion">start_data_ingestion() (sensor.pipeline.training_pipeline.TrainPipeline method)</a>
+</li>
+        <li><a href="sensor.pipeline.html#sensor.pipeline.training_pipeline.TrainPipeline.start_data_transformation">start_data_transformation() (sensor.pipeline.training_pipeline.TrainPipeline method)</a>
+</li>
+        <li><a href="sensor.pipeline.html#sensor.pipeline.training_pipeline.TrainPipeline.start_data_validaton">start_data_validaton() (sensor.pipeline.training_pipeline.TrainPipeline method)</a>
+</li>
+        <li><a href="sensor.pipeline.html#sensor.pipeline.training_pipeline.TrainPipeline.start_model_evaluation">start_model_evaluation() (sensor.pipeline.training_pipeline.TrainPipeline method)</a>
+</li>
+        <li><a href="sensor.pipeline.html#sensor.pipeline.training_pipeline.TrainPipeline.start_model_pusher">start_model_pusher() (sensor.pipeline.training_pipeline.TrainPipeline method)</a>
+</li>
+        <li><a href="sensor.pipeline.html#sensor.pipeline.training_pipeline.TrainPipeline.start_model_trainer">start_model_trainer() (sensor.pipeline.training_pipeline.TrainPipeline method)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="T" class="genindex-section">
+  <h2>T</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="sensor.ml.model.html#sensor.ml.model.estimator.TargetValueMapping">TargetValueMapping (class in sensor.ml.model.estimator)</a>
+</li>
+        <li><a href="sensor.entity.html#sensor.entity.artifact_entity.DataIngestionArtifact.test_file_path">test_file_path (sensor.entity.artifact_entity.DataIngestionArtifact attribute)</a>
+</li>
+        <li><a href="sensor.entity.html#sensor.entity.artifact_entity.ModelTrainerArtifact.test_metric_artifact">test_metric_artifact (sensor.entity.artifact_entity.ModelTrainerArtifact attribute)</a>
+</li>
+        <li><a href="sensor.ml.model.html#sensor.ml.model.estimator.TargetValueMapping.to_dict">to_dict() (sensor.ml.model.estimator.TargetValueMapping method)</a>
+</li>
+        <li><a href="sensor.entity.html#sensor.entity.artifact_entity.ModelTrainerArtifact.train_metric_artifact">train_metric_artifact (sensor.entity.artifact_entity.ModelTrainerArtifact attribute)</a>
+</li>
+        <li><a href="sensor.components.html#sensor.components.model_trainer.ModelTrainer.train_model">train_model() (sensor.components.model_trainer.ModelTrainer method)</a>
+</li>
+        <li><a href="sensor.entity.html#sensor.entity.artifact_entity.ModelEvaluationArtifact.train_model_metric_artifact">train_model_metric_artifact (sensor.entity.artifact_entity.ModelEvaluationArtifact attribute)</a>
+</li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="sensor.entity.html#sensor.entity.artifact_entity.DataIngestionArtifact.trained_file_path">trained_file_path (sensor.entity.artifact_entity.DataIngestionArtifact attribute)</a>
+</li>
+        <li><a href="sensor.entity.html#sensor.entity.artifact_entity.ModelTrainerArtifact.trained_model_file_path">trained_model_file_path (sensor.entity.artifact_entity.ModelTrainerArtifact attribute)</a>
+</li>
+        <li><a href="sensor.entity.html#sensor.entity.artifact_entity.ModelEvaluationArtifact.trained_model_path">trained_model_path (sensor.entity.artifact_entity.ModelEvaluationArtifact attribute)</a>
+</li>
+        <li><a href="sensor.entity.html#sensor.entity.config_entity.TrainingPipelineConfig">TrainingPipelineConfig (class in sensor.entity.config_entity)</a>
+</li>
+        <li><a href="sensor.pipeline.html#sensor.pipeline.training_pipeline.TrainPipeline">TrainPipeline (class in sensor.pipeline.training_pipeline)</a>
+</li>
+        <li><a href="sensor.entity.html#sensor.entity.artifact_entity.DataTransformationArtifact.transformed_object_file_path">transformed_object_file_path (sensor.entity.artifact_entity.DataTransformationArtifact attribute)</a>
+</li>
+        <li><a href="sensor.entity.html#sensor.entity.artifact_entity.DataTransformationArtifact.transformed_test_file_path">transformed_test_file_path (sensor.entity.artifact_entity.DataTransformationArtifact attribute)</a>
+</li>
+        <li><a href="sensor.entity.html#sensor.entity.artifact_entity.DataTransformationArtifact.transformed_train_file_path">transformed_train_file_path (sensor.entity.artifact_entity.DataTransformationArtifact attribute)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="V" class="genindex-section">
+  <h2>V</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="sensor.entity.html#sensor.entity.artifact_entity.DataValidationArtifact.valid_test_file_path">valid_test_file_path (sensor.entity.artifact_entity.DataValidationArtifact attribute)</a>
+</li>
+        <li><a href="sensor.entity.html#sensor.entity.artifact_entity.DataValidationArtifact.valid_train_file_path">valid_train_file_path (sensor.entity.artifact_entity.DataValidationArtifact attribute)</a>
+</li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="sensor.components.html#sensor.components.data_validation.DataValidation.validate_number_of_columns">validate_number_of_columns() (sensor.components.data_validation.DataValidation method)</a>
+</li>
+        <li><a href="sensor.entity.html#sensor.entity.artifact_entity.DataValidationArtifact.validation_status">validation_status (sensor.entity.artifact_entity.DataValidationArtifact attribute)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="W" class="genindex-section">
+  <h2>W</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="sensor.utils.html#sensor.utils.main_utils.write_yaml_file">write_yaml_file() (in module sensor.utils.main_utils)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          
+          
+        </div>
+
+        <div class="related-information">
+              Copyright &#169; 2022, Deepanshu Kaushik |
+          Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+          <a href="https://github.com/pradyunsg/furo">Furo theme</a>.
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer no-toc">
+      
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/scripts/furo.js"></script>
+    </body>
+</html>

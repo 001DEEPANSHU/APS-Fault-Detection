@@ -2,10 +2,10 @@
 <html class="no-js">
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Project Overview" href="articles/project_overview.html" />
+    <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="sensor.utils package" href="sensor.utils.html" /><link rel="prev" title="sensor.ml.model package" href="sensor.ml.model.html" />
 
     <meta name="generator" content="sphinx-4.5.0, furo 2022.01.02"/>
-        <title>APS(Air Pressure System) Fault Detection 0.0.1 documentation</title>
+        <title>sensor.pipeline package - APS(Air Pressure System) Fault Detection 0.0.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=df49af52631e7917044a9c21a57f7b83170a6dd0" />
     <link rel="stylesheet" type="text/css" href="_static/ftb.css" />
@@ -127,7 +127,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="#"><div class="brand">APS(Air Pressure System) Fault Detection 0.0.1 documentation</div></a>
+      <a href="index.html"><div class="brand">APS(Air Pressure System) Fault Detection 0.0.1 documentation</div></a>
     </div>
     <div class="header-right">
       <label class="toc-overlay-icon toc-header-icon" for="__toc">
@@ -139,7 +139,7 @@
   <aside class="sidebar-drawer">
     <div class="sidebar-container">
       
-      <div class="sidebar-sticky"><a class="sidebar-brand" href="#">
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="index.html">
   
   
   <span class="sidebar-brand-text">APS(Air Pressure System) Fault Detection 0.0.1 documentation</span>
@@ -150,12 +150,12 @@
   <input type="hidden" name="area" value="default">
 </form>
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
-  <ul>
+  <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="articles/project_overview.html"><strong>Project Overview</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="articles/ML_Approach.html">Machine Learning Approach</a></li>
 <li class="toctree-l1"><a class="reference internal" href="articles/ML_Pipeline.html">Machine Learning Pipeline</a></li>
 <li class="toctree-l1"><a class="reference internal" href="articles/demo.html"><strong>Practical Demo</strong></a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="sensor.html">sensor package</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 current has-children"><a class="reference internal" href="sensor.html">sensor package</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="sensor.cloud_storage.html">sensor.cloud_storage package</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sensor.components.html">sensor.components package</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sensor.configuration.html">sensor.configuration package</a></li>
@@ -170,7 +170,7 @@
 <li class="toctree-l3"><a class="reference internal" href="sensor.ml.model.html">sensor.ml.model package</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="sensor.pipeline.html">sensor.pipeline package</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">sensor.pipeline package</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sensor.utils.html">sensor.utils package</a></li>
 </ul>
 </li>
@@ -218,8 +218,8 @@
     
     <div class="ftb-dropdown-content">
       <a href="https://github.com/001DEEPANSHU/APS-Fault-Detection">Repository</a>
-<a href="https://github.com/001DEEPANSHU/APS-Fault-Detection/issues/new?title=Issue%20on%20page%20%2Findex.html&body=Your%20issue%20content%20here.">Open Issue</a>
-<a href="https://github.com/001DEEPANSHU/APS-Fault-Detection/edit/main/docs/index.rst" >Suggest Edit</a>
+<a href="https://github.com/001DEEPANSHU/APS-Fault-Detection/issues/new?title=Issue%20on%20page%20%2Fsensor.pipeline.html&body=Your%20issue%20content%20here.">Open Issue</a>
+<a href="https://github.com/001DEEPANSHU/APS-Fault-Detection/edit/main/docs/sensor.pipeline.rst" >Suggest Edit</a>
     </div>
     
   </div>
@@ -246,29 +246,53 @@
           </label>
         </div>
         <article role="main">
-          <div class="section" id="welcome-to-aps-air-pressure-system-fault-detection-s-documentation">
-<h1>Welcome to APS(Air Pressure System) Fault Detection’s documentation!<a class="headerlink" href="#welcome-to-aps-air-pressure-system-fault-detection-s-documentation" title="Permalink to this headline">¶</a></h1>
-<a class="reference internal image-reference" href="https://www.scania.com/content/www/in/en/home/services/repair-and-maintenance/fleet-care/_jcr_content/image.img.90.992.jpeg/1650617168631.jpeg"><img alt="https://www.scania.com/content/www/in/en/home/services/repair-and-maintenance/fleet-care/_jcr_content/image.img.90.992.jpeg/1650617168631.jpeg" src="https://www.scania.com/content/www/in/en/home/services/repair-and-maintenance/fleet-care/_jcr_content/image.img.90.992.jpeg/1650617168631.jpeg" style="width: 800px;"/></a>
-<div class="section" id="table-of-content">
-<h2><strong>Table of Content</strong><a class="headerlink" href="#table-of-content" title="Permalink to this headline">¶</a></h2>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="articles/project_overview.html"><strong>Project Overview</strong></a></li>
-<li class="toctree-l1"><a class="reference internal" href="articles/ML_Approach.html">Machine Learning Approach</a></li>
-<li class="toctree-l1"><a class="reference internal" href="articles/ML_Pipeline.html">Machine Learning Pipeline</a></li>
-<li class="toctree-l1"><a class="reference internal" href="articles/demo.html"><strong>Practical Demo</strong></a></li>
-<li class="toctree-l1"><a class="reference internal" href="sensor.html">sensor package</a></li>
-</ul>
+          <div class="section" id="sensor-pipeline-package">
+<h1>sensor.pipeline package<a class="headerlink" href="#sensor-pipeline-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
 </div>
-<p>Check out the <a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a> section for source code information</p>
-<p>You can visit the <a class="reference external" href="https://github.com/001DEEPANSHU/APS-Fault-Detection">github repository for this project here</a>.</p>
-<blockquote>
-<div><ul class="simple">
-<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
-<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
-<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
-</ul>
-</div></blockquote>
+<div class="section" id="module-sensor.pipeline.training_pipeline">
+<span id="sensor-pipeline-training-pipeline-module"></span><h2>sensor.pipeline.training_pipeline module<a class="headerlink" href="#module-sensor.pipeline.training_pipeline" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="sensor.pipeline.training_pipeline.TrainPipeline">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sensor.pipeline.training_pipeline.</span></span><span class="sig-name descname"><span class="pre">TrainPipeline</span></span><a class="reference internal" href="_modules/sensor/pipeline/training_pipeline.html#TrainPipeline"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensor.pipeline.training_pipeline.TrainPipeline" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensor.pipeline.training_pipeline.TrainPipeline.is_pipeline_running">
+<span class="sig-name descname"><span class="pre">is_pipeline_running</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#sensor.pipeline.training_pipeline.TrainPipeline.is_pipeline_running" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="sensor.pipeline.training_pipeline.TrainPipeline.run_pipeline">
+<span class="sig-name descname"><span class="pre">run_pipeline</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensor/pipeline/training_pipeline.html#TrainPipeline.run_pipeline"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensor.pipeline.training_pipeline.TrainPipeline.run_pipeline" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="sensor.pipeline.training_pipeline.TrainPipeline.start_data_ingestion">
+<span class="sig-name descname"><span class="pre">start_data_ingestion</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="sensor.entity.html#sensor.entity.artifact_entity.DataIngestionArtifact" title="sensor.entity.artifact_entity.DataIngestionArtifact"><span class="pre">sensor.entity.artifact_entity.DataIngestionArtifact</span></a></span></span><a class="reference internal" href="_modules/sensor/pipeline/training_pipeline.html#TrainPipeline.start_data_ingestion"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensor.pipeline.training_pipeline.TrainPipeline.start_data_ingestion" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="sensor.pipeline.training_pipeline.TrainPipeline.start_data_transformation">
+<span class="sig-name descname"><span class="pre">start_data_transformation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_validation_artifact</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="sensor.entity.html#sensor.entity.artifact_entity.DataValidationArtifact" title="sensor.entity.artifact_entity.DataValidationArtifact"><span class="pre">sensor.entity.artifact_entity.DataValidationArtifact</span></a></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensor/pipeline/training_pipeline.html#TrainPipeline.start_data_transformation"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensor.pipeline.training_pipeline.TrainPipeline.start_data_transformation" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="sensor.pipeline.training_pipeline.TrainPipeline.start_data_validaton">
+<span class="sig-name descname"><span class="pre">start_data_validaton</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_ingestion_artifact</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="sensor.entity.html#sensor.entity.artifact_entity.DataIngestionArtifact" title="sensor.entity.artifact_entity.DataIngestionArtifact"><span class="pre">sensor.entity.artifact_entity.DataIngestionArtifact</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="sensor.entity.html#sensor.entity.artifact_entity.DataValidationArtifact" title="sensor.entity.artifact_entity.DataValidationArtifact"><span class="pre">sensor.entity.artifact_entity.DataValidationArtifact</span></a></span></span><a class="reference internal" href="_modules/sensor/pipeline/training_pipeline.html#TrainPipeline.start_data_validaton"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensor.pipeline.training_pipeline.TrainPipeline.start_data_validaton" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="sensor.pipeline.training_pipeline.TrainPipeline.start_model_evaluation">
+<span class="sig-name descname"><span class="pre">start_model_evaluation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_validation_artifact</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="sensor.entity.html#sensor.entity.artifact_entity.DataValidationArtifact" title="sensor.entity.artifact_entity.DataValidationArtifact"><span class="pre">sensor.entity.artifact_entity.DataValidationArtifact</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_trainer_artifact</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="sensor.entity.html#sensor.entity.artifact_entity.ModelTrainerArtifact" title="sensor.entity.artifact_entity.ModelTrainerArtifact"><span class="pre">sensor.entity.artifact_entity.ModelTrainerArtifact</span></a></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensor/pipeline/training_pipeline.html#TrainPipeline.start_model_evaluation"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensor.pipeline.training_pipeline.TrainPipeline.start_model_evaluation" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="sensor.pipeline.training_pipeline.TrainPipeline.start_model_pusher">
+<span class="sig-name descname"><span class="pre">start_model_pusher</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_eval_artifact</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="sensor.entity.html#sensor.entity.artifact_entity.ModelEvaluationArtifact" title="sensor.entity.artifact_entity.ModelEvaluationArtifact"><span class="pre">sensor.entity.artifact_entity.ModelEvaluationArtifact</span></a></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensor/pipeline/training_pipeline.html#TrainPipeline.start_model_pusher"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensor.pipeline.training_pipeline.TrainPipeline.start_model_pusher" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="sensor.pipeline.training_pipeline.TrainPipeline.start_model_trainer">
+<span class="sig-name descname"><span class="pre">start_model_trainer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_transformation_artifact</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="sensor.entity.html#sensor.entity.artifact_entity.DataTransformationArtifact" title="sensor.entity.artifact_entity.DataTransformationArtifact"><span class="pre">sensor.entity.artifact_entity.DataTransformationArtifact</span></a></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensor/pipeline/training_pipeline.html#TrainPipeline.start_model_trainer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensor.pipeline.training_pipeline.TrainPipeline.start_model_trainer" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+</dd></dl>
+</div>
+<div class="section" id="module-sensor.pipeline">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-sensor.pipeline" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 
@@ -277,23 +301,33 @@
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="articles/project_overview.html">
+          <a class="next-page" href="sensor.utils.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title"><strong>Project Overview</strong></div>
+                <div class="title">sensor.utils package</div>
               </div>
               <svg><use href="#svg-arrow-right"></use></svg>
             </a>
-          
+          <a class="prev-page" href="sensor.ml.model.html">
+              <svg><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">sensor.ml.model package</div>
+                
+              </div>
+            </a>
         </div>
 
         <div class="related-information">
               Copyright &#169; 2022, Deepanshu Kaushik |
           Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
           <a href="https://github.com/pradyunsg/furo">Furo theme</a>.
-            | <a class="muted-link" href="_sources/index.rst.txt"
+            | <a class="muted-link" href="_sources/sensor.pipeline.rst.txt"
                rel="nofollow">
               Show Source
             </a>
@@ -313,8 +347,10 @@
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">Welcome to APS(Air Pressure System) Fault Detection’s documentation!</a><ul>
-<li><a class="reference internal" href="#table-of-content"><strong>Table of Content</strong></a></li>
+<li><a class="reference internal" href="#">sensor.pipeline package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-sensor.pipeline.training_pipeline">sensor.pipeline.training_pipeline module</a></li>
+<li><a class="reference internal" href="#module-sensor.pipeline">Module contents</a></li>
 </ul>
 </li>
 </ul>

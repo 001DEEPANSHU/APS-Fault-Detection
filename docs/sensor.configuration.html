@@ -2,10 +2,10 @@
 <html class="no-js">
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
-    <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Project Overview" href="articles/project_overview.html" />
+    <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="sensor.constant package" href="sensor.constant.html" /><link rel="prev" title="sensor.components package" href="sensor.components.html" />
 
     <meta name="generator" content="sphinx-4.5.0, furo 2022.01.02"/>
-        <title>APS(Air Pressure System) Fault Detection 0.0.1 documentation</title>
+        <title>sensor.configuration package - APS(Air Pressure System) Fault Detection 0.0.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=df49af52631e7917044a9c21a57f7b83170a6dd0" />
     <link rel="stylesheet" type="text/css" href="_static/ftb.css" />
@@ -127,7 +127,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="#"><div class="brand">APS(Air Pressure System) Fault Detection 0.0.1 documentation</div></a>
+      <a href="index.html"><div class="brand">APS(Air Pressure System) Fault Detection 0.0.1 documentation</div></a>
     </div>
     <div class="header-right">
       <label class="toc-overlay-icon toc-header-icon" for="__toc">
@@ -139,7 +139,7 @@
   <aside class="sidebar-drawer">
     <div class="sidebar-container">
       
-      <div class="sidebar-sticky"><a class="sidebar-brand" href="#">
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="index.html">
   
   
   <span class="sidebar-brand-text">APS(Air Pressure System) Fault Detection 0.0.1 documentation</span>
@@ -150,15 +150,15 @@
   <input type="hidden" name="area" value="default">
 </form>
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
-  <ul>
+  <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="articles/project_overview.html"><strong>Project Overview</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="articles/ML_Approach.html">Machine Learning Approach</a></li>
 <li class="toctree-l1"><a class="reference internal" href="articles/ML_Pipeline.html">Machine Learning Pipeline</a></li>
 <li class="toctree-l1"><a class="reference internal" href="articles/demo.html"><strong>Practical Demo</strong></a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="sensor.html">sensor package</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l1 current has-children"><a class="reference internal" href="sensor.html">sensor package</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="sensor.cloud_storage.html">sensor.cloud_storage package</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sensor.components.html">sensor.components package</a></li>
-<li class="toctree-l2"><a class="reference internal" href="sensor.configuration.html">sensor.configuration package</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">sensor.configuration package</a></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="sensor.constant.html">sensor.constant package</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
 <li class="toctree-l3"><a class="reference internal" href="sensor.constant.training_pipeline.html">sensor.constant.training_pipeline package</a></li>
 </ul>
@@ -218,8 +218,8 @@
     
     <div class="ftb-dropdown-content">
       <a href="https://github.com/001DEEPANSHU/APS-Fault-Detection">Repository</a>
-<a href="https://github.com/001DEEPANSHU/APS-Fault-Detection/issues/new?title=Issue%20on%20page%20%2Findex.html&body=Your%20issue%20content%20here.">Open Issue</a>
-<a href="https://github.com/001DEEPANSHU/APS-Fault-Detection/edit/main/docs/index.rst" >Suggest Edit</a>
+<a href="https://github.com/001DEEPANSHU/APS-Fault-Detection/issues/new?title=Issue%20on%20page%20%2Fsensor.configuration.html&body=Your%20issue%20content%20here.">Open Issue</a>
+<a href="https://github.com/001DEEPANSHU/APS-Fault-Detection/edit/main/docs/sensor.configuration.rst" >Suggest Edit</a>
     </div>
     
   </div>
@@ -246,29 +246,25 @@
           </label>
         </div>
         <article role="main">
-          <div class="section" id="welcome-to-aps-air-pressure-system-fault-detection-s-documentation">
-<h1>Welcome to APS(Air Pressure System) Fault Detection’s documentation!<a class="headerlink" href="#welcome-to-aps-air-pressure-system-fault-detection-s-documentation" title="Permalink to this headline">¶</a></h1>
-<a class="reference internal image-reference" href="https://www.scania.com/content/www/in/en/home/services/repair-and-maintenance/fleet-care/_jcr_content/image.img.90.992.jpeg/1650617168631.jpeg"><img alt="https://www.scania.com/content/www/in/en/home/services/repair-and-maintenance/fleet-care/_jcr_content/image.img.90.992.jpeg/1650617168631.jpeg" src="https://www.scania.com/content/www/in/en/home/services/repair-and-maintenance/fleet-care/_jcr_content/image.img.90.992.jpeg/1650617168631.jpeg" style="width: 800px;"/></a>
-<div class="section" id="table-of-content">
-<h2><strong>Table of Content</strong><a class="headerlink" href="#table-of-content" title="Permalink to this headline">¶</a></h2>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="articles/project_overview.html"><strong>Project Overview</strong></a></li>
-<li class="toctree-l1"><a class="reference internal" href="articles/ML_Approach.html">Machine Learning Approach</a></li>
-<li class="toctree-l1"><a class="reference internal" href="articles/ML_Pipeline.html">Machine Learning Pipeline</a></li>
-<li class="toctree-l1"><a class="reference internal" href="articles/demo.html"><strong>Practical Demo</strong></a></li>
-<li class="toctree-l1"><a class="reference internal" href="sensor.html">sensor package</a></li>
-</ul>
+          <div class="section" id="sensor-configuration-package">
+<h1>sensor.configuration package<a class="headerlink" href="#sensor-configuration-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
 </div>
-<p>Check out the <a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a> section for source code information</p>
-<p>You can visit the <a class="reference external" href="https://github.com/001DEEPANSHU/APS-Fault-Detection">github repository for this project here</a>.</p>
-<blockquote>
-<div><ul class="simple">
-<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
-<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
-<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
-</ul>
-</div></blockquote>
+<div class="section" id="module-sensor.configuration.mongo_db_connection">
+<span id="sensor-configuration-mongo-db-connection-module"></span><h2>sensor.configuration.mongo_db_connection module<a class="headerlink" href="#module-sensor.configuration.mongo_db_connection" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="sensor.configuration.mongo_db_connection.MongoDBClient">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sensor.configuration.mongo_db_connection.</span></span><span class="sig-name descname"><span class="pre">MongoDBClient</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">database_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'APS_DB'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensor/configuration/mongo_db_connection.html#MongoDBClient"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensor.configuration.mongo_db_connection.MongoDBClient" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="sensor.configuration.mongo_db_connection.MongoDBClient.client">
+<span class="sig-name descname"><span class="pre">client</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#sensor.configuration.mongo_db_connection.MongoDBClient.client" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+</dd></dl>
+</div>
+<div class="section" id="module-sensor.configuration">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-sensor.configuration" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 
@@ -277,23 +273,33 @@
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="articles/project_overview.html">
+          <a class="next-page" href="sensor.constant.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title"><strong>Project Overview</strong></div>
+                <div class="title">sensor.constant package</div>
               </div>
               <svg><use href="#svg-arrow-right"></use></svg>
             </a>
-          
+          <a class="prev-page" href="sensor.components.html">
+              <svg><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">sensor.components package</div>
+                
+              </div>
+            </a>
         </div>
 
         <div class="related-information">
               Copyright &#169; 2022, Deepanshu Kaushik |
           Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
           <a href="https://github.com/pradyunsg/furo">Furo theme</a>.
-            | <a class="muted-link" href="_sources/index.rst.txt"
+            | <a class="muted-link" href="_sources/sensor.configuration.rst.txt"
                rel="nofollow">
               Show Source
             </a>
@@ -313,8 +319,10 @@
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">Welcome to APS(Air Pressure System) Fault Detection’s documentation!</a><ul>
-<li><a class="reference internal" href="#table-of-content"><strong>Table of Content</strong></a></li>
+<li><a class="reference internal" href="#">sensor.configuration package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-sensor.configuration.mongo_db_connection">sensor.configuration.mongo_db_connection module</a></li>
+<li><a class="reference internal" href="#module-sensor.configuration">Module contents</a></li>
 </ul>
 </li>
 </ul>
