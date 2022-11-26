@@ -1,0 +1,458 @@
+<!doctype html>
+<html class="no-js">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="sensor.configuration package" href="sensor.configuration.html" /><link rel="prev" title="sensor.cloud_storage package" href="sensor.cloud_storage.html" />
+
+    <meta name="generator" content="sphinx-4.5.0, furo 2022.01.02"/>
+        <title>sensor.components package - APS(Air Pressure System) Fault Detection 0.0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=df49af52631e7917044a9c21a57f7b83170a6dd0" />
+    <link rel="stylesheet" type="text/css" href="_static/ftb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?digest=fade93df149f7c5fedb3ff897f799dc7d283b420" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  body[data-theme="dark"] {
+    --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+  }
+  @media (prefers-color-scheme: dark) {
+    body:not([data-theme="light"]) {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+  }
+</style></head>
+  <body>
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" />
+      <line x1="4" y1="6" x2="20" y2="6" />
+      <line x1="10" y1="12" x2="20" y2="12" />
+      <line x1="6" y1="18" x2="20" y2="18" />
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+<div class="announcement">
+  <aside class="announcement-content">
+     Copyright © 2022, Deepanshu Kaushik 
+  </aside>
+</div>
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="index.html"><div class="brand">APS(Air Pressure System) Fault Detection 0.0.1 documentation</div></a>
+    </div>
+    <div class="header-right">
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="index.html">
+  
+  
+  <span class="sidebar-brand-text">APS(Air Pressure System) Fault Detection 0.0.1 documentation</span>
+  
+</a><form class="sidebar-search-container" method="get" action="search.html" role="search">
+  <input class="sidebar-search" placeholder=Search name="q" aria-label="Search">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="articles/project_overview.html"><strong>Project Overview</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="articles/ML_Approach.html">Machine Learning Approach</a></li>
+<li class="toctree-l1"><a class="reference internal" href="articles/ML_Pipeline.html">Machine Learning Pipeline</a></li>
+<li class="toctree-l1"><a class="reference internal" href="articles/demo.html"><strong>Practical Demo</strong></a></li>
+<li class="toctree-l1 current has-children"><a class="reference internal" href="sensor.html">sensor package</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="sensor.cloud_storage.html">sensor.cloud_storage package</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">sensor.components package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sensor.configuration.html">sensor.configuration package</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="sensor.constant.html">sensor.constant package</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="sensor.constant.training_pipeline.html">sensor.constant.training_pipeline package</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="sensor.data_access.html">sensor.data_access package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sensor.entity.html">sensor.entity package</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="sensor.ml.html">sensor.ml package</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="sensor.ml.metric.html">sensor.ml.metric package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sensor.ml.model.html">sensor.ml.model package</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="sensor.pipeline.html">sensor.pipeline package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sensor.utils.html">sensor.utils package</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        
+<div class="ftb-container" id="ftb-container">
+  
+  <div class="ftb-dropdown">
+    <button type="button" class="ftb-dropbtn clickable" title="Scroll to top" onClick="location.href='#top'">
+      
+      <div class="visually-hidden">Scroll to top</div>
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M4.97 12.97a.75.75 0 101.06 1.06L11 9.06v12.19a.75.75 0 001.5 0V9.06l4.97 4.97a.75.75 0 101.06-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25zM4.75 3.5a.75.75 0 010-1.5h14.5a.75.75 0 010 1.5H4.75z"></path></svg>
+    </button>
+    
+  </div>
+  
+  <div class="ftb-dropdown">
+    <button type="button" class="ftb-dropbtn clickable" title="Fullscreen" onClick="openFullscreen()">
+      
+      <div class="visually-hidden">Fullscreen</div>
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill-rule="evenodd" d="M4.75 4.5a.25.25 0 00-.25.25v3.5a.75.75 0 01-1.5 0v-3.5C3 3.784 3.784 3 4.75 3h3.5a.75.75 0 010 1.5h-3.5zM15 3.75a.75.75 0 01.75-.75h3.5c.966 0 1.75.784 1.75 1.75v3.5a.75.75 0 01-1.5 0v-3.5a.25.25 0 00-.25-.25h-3.5a.75.75 0 01-.75-.75zM3.75 15a.75.75 0 01.75.75v3.5c0 .138.112.25.25.25h3.5a.75.75 0 010 1.5h-3.5A1.75 1.75 0 013 19.25v-3.5a.75.75 0 01.75-.75zm16.5 0a.75.75 0 01.75.75v3.5A1.75 1.75 0 0119.25 21h-3.5a.75.75 0 010-1.5h3.5a.25.25 0 00.25-.25v-3.5a.75.75 0 01.75-.75z"></path></svg>
+    </button>
+    
+  </div>
+  
+  <div class="ftb-dropdown">
+    <button type="button" class="ftb-dropbtn " title="GitHub Menu" onClick="">
+      
+      <div class="visually-hidden">GitHub Menu</div>
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>
+    </button>
+    
+    <div class="ftb-dropdown-content">
+      <a href="https://github.com/001DEEPANSHU/APS-Fault-Detection">Repository</a>
+<a href="https://github.com/001DEEPANSHU/APS-Fault-Detection/issues/new?title=Issue%20on%20page%20%2Fsensor.components.html&body=Your%20issue%20content%20here.">Open Issue</a>
+<a href="https://github.com/001DEEPANSHU/APS-Fault-Detection/edit/main/docs/sensor.components.rst" >Suggest Edit</a>
+    </div>
+    
+  </div>
+  
+  <div class="ftb-dropdown">
+    <button type="button" class="ftb-dropbtn theme-toggle" title="Toggle Light / Dark / Auto color theme" onClick="">
+      
+      <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+      
+      <svg class="theme-icon-when-auto ftb-theme-toggle"><use href="#svg-sun-half"></use></svg>
+<svg class="theme-icon-when-dark ftb-theme-toggle"><use href="#svg-moon"></use></svg>
+<svg class="theme-icon-when-light ftb-theme-toggle"><use href="#svg-sun"></use></svg>
+
+    </button>
+    
+  </div>
+  
+</div>
+
+        <div class="content-icon-container">
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <div class="section" id="sensor-components-package">
+<h1>sensor.components package<a class="headerlink" href="#sensor-components-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-sensor.components.data_ingestion">
+<span id="sensor-components-data-ingestion-module"></span><h2>sensor.components.data_ingestion module<a class="headerlink" href="#module-sensor.components.data_ingestion" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="sensor.components.data_ingestion.DataIngestion">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sensor.components.data_ingestion.</span></span><span class="sig-name descname"><span class="pre">DataIngestion</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_ingestion_config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="sensor.entity.html#sensor.entity.config_entity.DataIngestionConfig" title="sensor.entity.config_entity.DataIngestionConfig"><span class="pre">sensor.entity.config_entity.DataIngestionConfig</span></a></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensor/components/data_ingestion.html#DataIngestion"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensor.components.data_ingestion.DataIngestion" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="sensor.components.data_ingestion.DataIngestion.export_data_into_feature_store">
+<span class="sig-name descname"><span class="pre">export_data_into_feature_store</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">pandas.core.frame.DataFrame</span></span></span><a class="reference internal" href="_modules/sensor/components/data_ingestion.html#DataIngestion.export_data_into_feature_store"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensor.components.data_ingestion.DataIngestion.export_data_into_feature_store" title="Permalink to this definition">¶</a></dt>
+<dd><p>Export mongo db collection record as data frame into feature</p>
+</dd></dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="sensor.components.data_ingestion.DataIngestion.initiate_data_ingestion">
+<span class="sig-name descname"><span class="pre">initiate_data_ingestion</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="sensor.entity.html#sensor.entity.artifact_entity.DataIngestionArtifact" title="sensor.entity.artifact_entity.DataIngestionArtifact"><span class="pre">sensor.entity.artifact_entity.DataIngestionArtifact</span></a></span></span><a class="reference internal" href="_modules/sensor/components/data_ingestion.html#DataIngestion.initiate_data_ingestion"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensor.components.data_ingestion.DataIngestion.initiate_data_ingestion" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="sensor.components.data_ingestion.DataIngestion.split_data_as_train_test">
+<span class="sig-name descname"><span class="pre">split_data_as_train_test</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataframe</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pandas.core.frame.DataFrame</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/sensor/components/data_ingestion.html#DataIngestion.split_data_as_train_test"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensor.components.data_ingestion.DataIngestion.split_data_as_train_test" title="Permalink to this definition">¶</a></dt>
+<dd><p>Feature store dataset will be split into train and test file</p>
+</dd></dl>
+</dd></dl>
+</div>
+<div class="section" id="module-sensor.components.data_transformation">
+<span id="sensor-components-data-transformation-module"></span><h2>sensor.components.data_transformation module<a class="headerlink" href="#module-sensor.components.data_transformation" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="sensor.components.data_transformation.DataTransformation">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sensor.components.data_transformation.</span></span><span class="sig-name descname"><span class="pre">DataTransformation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_validation_artifact</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="sensor.entity.html#sensor.entity.artifact_entity.DataValidationArtifact" title="sensor.entity.artifact_entity.DataValidationArtifact"><span class="pre">sensor.entity.artifact_entity.DataValidationArtifact</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_transformation_config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="sensor.entity.html#sensor.entity.config_entity.DataTransformationConfig" title="sensor.entity.config_entity.DataTransformationConfig"><span class="pre">sensor.entity.config_entity.DataTransformationConfig</span></a></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensor/components/data_transformation.html#DataTransformation"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensor.components.data_transformation.DataTransformation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="sensor.components.data_transformation.DataTransformation.get_data_transformer_object">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_data_transformer_object</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">sklearn.pipeline.Pipeline</span></span></span><a class="reference internal" href="_modules/sensor/components/data_transformation.html#DataTransformation.get_data_transformer_object"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensor.components.data_transformation.DataTransformation.get_data_transformer_object" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="sensor.components.data_transformation.DataTransformation.initiate_data_transformation">
+<span class="sig-name descname"><span class="pre">initiate_data_transformation</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="sensor.entity.html#sensor.entity.artifact_entity.DataTransformationArtifact" title="sensor.entity.artifact_entity.DataTransformationArtifact"><span class="pre">sensor.entity.artifact_entity.DataTransformationArtifact</span></a></span></span><a class="reference internal" href="_modules/sensor/components/data_transformation.html#DataTransformation.initiate_data_transformation"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensor.components.data_transformation.DataTransformation.initiate_data_transformation" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="sensor.components.data_transformation.DataTransformation.read_data">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">read_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_path</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">pandas.core.frame.DataFrame</span></span></span><a class="reference internal" href="_modules/sensor/components/data_transformation.html#DataTransformation.read_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensor.components.data_transformation.DataTransformation.read_data" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+</dd></dl>
+</div>
+<div class="section" id="module-sensor.components.data_validation">
+<span id="sensor-components-data-validation-module"></span><h2>sensor.components.data_validation module<a class="headerlink" href="#module-sensor.components.data_validation" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="sensor.components.data_validation.DataValidation">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sensor.components.data_validation.</span></span><span class="sig-name descname"><span class="pre">DataValidation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_ingestion_artifact</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="sensor.entity.html#sensor.entity.artifact_entity.DataIngestionArtifact" title="sensor.entity.artifact_entity.DataIngestionArtifact"><span class="pre">sensor.entity.artifact_entity.DataIngestionArtifact</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_validation_config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="sensor.entity.html#sensor.entity.config_entity.DataValidationConfig" title="sensor.entity.config_entity.DataValidationConfig"><span class="pre">sensor.entity.config_entity.DataValidationConfig</span></a></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensor/components/data_validation.html#DataValidation"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensor.components.data_validation.DataValidation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="sensor.components.data_validation.DataValidation.detect_dataset_drift">
+<span class="sig-name descname"><span class="pre">detect_dataset_drift</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">base_df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">current_df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.05</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="reference internal" href="_modules/sensor/components/data_validation.html#DataValidation.detect_dataset_drift"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensor.components.data_validation.DataValidation.detect_dataset_drift" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="sensor.components.data_validation.DataValidation.initiate_data_validation">
+<span class="sig-name descname"><span class="pre">initiate_data_validation</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="sensor.entity.html#sensor.entity.artifact_entity.DataValidationArtifact" title="sensor.entity.artifact_entity.DataValidationArtifact"><span class="pre">sensor.entity.artifact_entity.DataValidationArtifact</span></a></span></span><a class="reference internal" href="_modules/sensor/components/data_validation.html#DataValidation.initiate_data_validation"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensor.components.data_validation.DataValidation.initiate_data_validation" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="sensor.components.data_validation.DataValidation.is_numerical_column_exist">
+<span class="sig-name descname"><span class="pre">is_numerical_column_exist</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataframe</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pandas.core.frame.DataFrame</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="reference internal" href="_modules/sensor/components/data_validation.html#DataValidation.is_numerical_column_exist"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensor.components.data_validation.DataValidation.is_numerical_column_exist" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="sensor.components.data_validation.DataValidation.read_data">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">read_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_path</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">pandas.core.frame.DataFrame</span></span></span><a class="reference internal" href="_modules/sensor/components/data_validation.html#DataValidation.read_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensor.components.data_validation.DataValidation.read_data" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="sensor.components.data_validation.DataValidation.validate_number_of_columns">
+<span class="sig-name descname"><span class="pre">validate_number_of_columns</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataframe</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">pandas.core.frame.DataFrame</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="reference internal" href="_modules/sensor/components/data_validation.html#DataValidation.validate_number_of_columns"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensor.components.data_validation.DataValidation.validate_number_of_columns" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+</dd></dl>
+</div>
+<div class="section" id="module-sensor.components.model_evaluation">
+<span id="sensor-components-model-evaluation-module"></span><h2>sensor.components.model_evaluation module<a class="headerlink" href="#module-sensor.components.model_evaluation" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="sensor.components.model_evaluation.ModelEvaluation">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sensor.components.model_evaluation.</span></span><span class="sig-name descname"><span class="pre">ModelEvaluation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_eval_config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="sensor.entity.html#sensor.entity.config_entity.ModelEvaluationConfig" title="sensor.entity.config_entity.ModelEvaluationConfig"><span class="pre">sensor.entity.config_entity.ModelEvaluationConfig</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_validation_artifact</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="sensor.entity.html#sensor.entity.artifact_entity.DataValidationArtifact" title="sensor.entity.artifact_entity.DataValidationArtifact"><span class="pre">sensor.entity.artifact_entity.DataValidationArtifact</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_trainer_artifact</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="sensor.entity.html#sensor.entity.artifact_entity.ModelTrainerArtifact" title="sensor.entity.artifact_entity.ModelTrainerArtifact"><span class="pre">sensor.entity.artifact_entity.ModelTrainerArtifact</span></a></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensor/components/model_evaluation.html#ModelEvaluation"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensor.components.model_evaluation.ModelEvaluation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="sensor.components.model_evaluation.ModelEvaluation.initiate_model_evaluation">
+<span class="sig-name descname"><span class="pre">initiate_model_evaluation</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="sensor.entity.html#sensor.entity.artifact_entity.ModelEvaluationArtifact" title="sensor.entity.artifact_entity.ModelEvaluationArtifact"><span class="pre">sensor.entity.artifact_entity.ModelEvaluationArtifact</span></a></span></span><a class="reference internal" href="_modules/sensor/components/model_evaluation.html#ModelEvaluation.initiate_model_evaluation"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensor.components.model_evaluation.ModelEvaluation.initiate_model_evaluation" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+</dd></dl>
+</div>
+<div class="section" id="module-sensor.components.model_pusher">
+<span id="sensor-components-model-pusher-module"></span><h2>sensor.components.model_pusher module<a class="headerlink" href="#module-sensor.components.model_pusher" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="sensor.components.model_pusher.ModelPusher">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sensor.components.model_pusher.</span></span><span class="sig-name descname"><span class="pre">ModelPusher</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_pusher_config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="sensor.entity.html#sensor.entity.config_entity.ModelPusherConfig" title="sensor.entity.config_entity.ModelPusherConfig"><span class="pre">sensor.entity.config_entity.ModelPusherConfig</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_eval_artifact</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="sensor.entity.html#sensor.entity.artifact_entity.ModelEvaluationArtifact" title="sensor.entity.artifact_entity.ModelEvaluationArtifact"><span class="pre">sensor.entity.artifact_entity.ModelEvaluationArtifact</span></a></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensor/components/model_pusher.html#ModelPusher"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensor.components.model_pusher.ModelPusher" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="sensor.components.model_pusher.ModelPusher.initiate_model_pusher">
+<span class="sig-name descname"><span class="pre">initiate_model_pusher</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="sensor.entity.html#sensor.entity.artifact_entity.ModelPusherArtifact" title="sensor.entity.artifact_entity.ModelPusherArtifact"><span class="pre">sensor.entity.artifact_entity.ModelPusherArtifact</span></a></span></span><a class="reference internal" href="_modules/sensor/components/model_pusher.html#ModelPusher.initiate_model_pusher"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensor.components.model_pusher.ModelPusher.initiate_model_pusher" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+</dd></dl>
+</div>
+<div class="section" id="module-sensor.components.model_trainer">
+<span id="sensor-components-model-trainer-module"></span><h2>sensor.components.model_trainer module<a class="headerlink" href="#module-sensor.components.model_trainer" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="sensor.components.model_trainer.ModelTrainer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">sensor.components.model_trainer.</span></span><span class="sig-name descname"><span class="pre">ModelTrainer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model_trainer_config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="sensor.entity.html#sensor.entity.config_entity.ModelTrainerConfig" title="sensor.entity.config_entity.ModelTrainerConfig"><span class="pre">sensor.entity.config_entity.ModelTrainerConfig</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_transformation_artifact</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="sensor.entity.html#sensor.entity.artifact_entity.DataTransformationArtifact" title="sensor.entity.artifact_entity.DataTransformationArtifact"><span class="pre">sensor.entity.artifact_entity.DataTransformationArtifact</span></a></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensor/components/model_trainer.html#ModelTrainer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensor.components.model_trainer.ModelTrainer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="sensor.components.model_trainer.ModelTrainer.initiate_model_trainer">
+<span class="sig-name descname"><span class="pre">initiate_model_trainer</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">→</span> <span class="sig-return-typehint"><a class="reference internal" href="sensor.entity.html#sensor.entity.artifact_entity.ModelTrainerArtifact" title="sensor.entity.artifact_entity.ModelTrainerArtifact"><span class="pre">sensor.entity.artifact_entity.ModelTrainerArtifact</span></a></span></span><a class="reference internal" href="_modules/sensor/components/model_trainer.html#ModelTrainer.initiate_model_trainer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensor.components.model_trainer.ModelTrainer.initiate_model_trainer" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="sensor.components.model_trainer.ModelTrainer.train_model">
+<span class="sig-name descname"><span class="pre">train_model</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x_train</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_train</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/sensor/components/model_trainer.html#ModelTrainer.train_model"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#sensor.components.model_trainer.ModelTrainer.train_model" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+</dd></dl>
+</div>
+<div class="section" id="module-sensor.components">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-sensor.components" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="sensor.configuration.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">sensor.configuration package</div>
+              </div>
+              <svg><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="sensor.cloud_storage.html">
+              <svg><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">sensor.cloud_storage package</div>
+                
+              </div>
+            </a>
+        </div>
+
+        <div class="related-information">
+              Copyright &#169; 2022, Deepanshu Kaushik |
+          Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+          <a href="https://github.com/pradyunsg/furo">Furo theme</a>.
+            | <a class="muted-link" href="_sources/sensor.components.rst.txt"
+               rel="nofollow">
+              Show Source
+            </a>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            Contents
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">sensor.components package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-sensor.components.data_ingestion">sensor.components.data_ingestion module</a></li>
+<li><a class="reference internal" href="#module-sensor.components.data_transformation">sensor.components.data_transformation module</a></li>
+<li><a class="reference internal" href="#module-sensor.components.data_validation">sensor.components.data_validation module</a></li>
+<li><a class="reference internal" href="#module-sensor.components.model_evaluation">sensor.components.model_evaluation module</a></li>
+<li><a class="reference internal" href="#module-sensor.components.model_pusher">sensor.components.model_pusher module</a></li>
+<li><a class="reference internal" href="#module-sensor.components.model_trainer">sensor.components.model_trainer module</a></li>
+<li><a class="reference internal" href="#module-sensor.components">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/scripts/furo.js"></script>
+    <script>var elem = document.documentElement;
+
+function openFullscreen() {
+if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+} else if (elem.webkitRequestFullscreen) { /* Safari */
+    elem.webkitRequestFullscreen();
+} else if (elem.msRequestFullscreen) { /* IE11 */
+    elem.msRequestFullscreen();
+}
+}
+</script>
+    </body>
+</html>
