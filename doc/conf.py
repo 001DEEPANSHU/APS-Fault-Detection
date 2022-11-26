@@ -46,7 +46,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = 'Word Count'
+project = 'WordCount'
 copyright = '2018, Harsha'
 author = 'Harsha'
 
@@ -149,7 +149,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'APS-Fault-Detection', 'WordCount Documentation',
+    (master_doc, 'wordcount', 'WordCount Documentation',
      [author], 1)
 ]
 

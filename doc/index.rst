@@ -4,7 +4,7 @@
    table of contents
 
 
-Word Count
+word-count
 ==========
 
 .. toctree::

@@ -130,4 +130,5 @@ dmypy.json
 .DS_Store
 
 artifact
+__pycache__/
 _build/
