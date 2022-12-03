@@ -36,7 +36,8 @@ extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.napoleon',
     'sphinx.ext.viewcode',
-    'sphinx.ext.githubpages', 
+    'sphinx.ext.githubpages',
+    'rst2pdf.pdfbuilder', 
 ]
 
 
@@ -62,25 +63,25 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 # a list of builtin themes.
 #
 
-# html_theme = "furo_tb"
-html_theme = "sphinx_rtd_theme"
+html_theme = "furo_tb"
+# html_theme = "sphinx_rtd_theme"
 
 # theme options inherit directly from furo
-# html_theme_options = {
-#     "announcement": "Copyright © 2022, Deepanshu Kaushik",
-# }
-# furo_topbar_widgets = {
-#     "scroll_to_top": True,
-#     "fullscreen": True,
-#     "github": {
-#         "url": "https://github.com/001DEEPANSHU/APS-Fault-Detection",
-#         "branch": "main",
-#         "path_to_docs": "docs",
-#     },
-#     "download": False,
-#     "theme_toggle": True,
-# }
-# furo_topbar_hide_on_scroll = False
+html_theme_options = {
+    "announcement": "Copyright © 2022, Deepanshu Kaushik",
+}
+furo_topbar_widgets = {
+    "scroll_to_top": True,
+    "fullscreen": True,
+    "github": {
+        "url": "https://github.com/001DEEPANSHU/APS-Fault-Detection",
+        "branch": "master",
+        "path_to_docs": "doc",
+    },
+    "download": False,
+    "theme_toggle": True,
+}
+furo_topbar_hide_on_scroll = False
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
