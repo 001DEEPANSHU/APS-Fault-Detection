@@ -37,7 +37,7 @@ extensions = [
     'sphinx.ext.napoleon',
     'sphinx.ext.viewcode',
     'sphinx.ext.githubpages',
-    'rst2pdf.pdfbuilder', 
+    # 'rst2pdf.pdfbuilder', 
 ]
 
 
